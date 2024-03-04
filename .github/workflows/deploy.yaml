@@ -28,7 +28,7 @@ jobs:
         run: |
           if test ${{ secrets.SLACK_WEBHOOK_URL }} != ""; then
             . "scripts/lib.sh"
-            echo "Your environment is not ready, check Slack!"
+            echo "Your environment is really not ready, check Slack!"
             tmpHosts="$(kubectl get ing -l app.kubernetes.io/instance="${REF}" '-o=jsonpath={.items[*].spec.rules[*].host}')"
             for i in $tmpHosts ; do INGRESS_HOSTS="$INGRESS_HOSTS $i \\n"; done
             curl -X POST -H 'Content-type: application/json' --data '{"text":"Deployment Successful - :rocket: Check out hosts:\n'"$INGRESS_HOSTS"'"}' "${SLACK_URL}"
