@@ -18,7 +18,7 @@
 export DEFAULT_BRANCH=prod
 export HELM_CHART_NAME="pingidentity/ping-devops"
 export HELM_CHART_URL="https://helm.pingidentity.com/"
-export CHART_VERSION="0.9.0"
+export CHART_VERSION="0.10.2"
 export VALUES_FILE="helm/values.yaml.final"
 export VALUES_DEV_FILE="helm/values.dev.yaml.final"
 export KUSTOMIZE_DIR="kustomize"
@@ -32,3 +32,12 @@ export NS_PER_ENV="true"
 ##  Prefixes release namespace. K8S_NAMESPACE variable is used for namespace for release
 ##  If used, include trailing slash. (e.g. NS_PREFIX='myenv-')
 export NS_PREFIX=""
+## END OF AUTOMATED VARS ##
+
+
+export NS_PER_ENV="true"
+##  Prefixes release namespace. K8S_NAMESPACE variable is used for namespace for release
+##  If used, include trailing slash. (e.g. NS_PREFIX='myenv-')
+export NS_PREFIX=""
+## END OF AUTOMATED VARS ##
+
