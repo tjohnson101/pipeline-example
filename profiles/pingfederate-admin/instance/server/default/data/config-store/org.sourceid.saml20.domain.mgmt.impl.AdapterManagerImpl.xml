@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="IdpAuthnAdapterInstances">
+        <con:item name="HTMLFormSimplePCV">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="minimal">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="OTPCIAM">com.pingidentity.adapters.otpadapter.OTPIdpAdapter</con:item>
+        <con:item name="intune101">com.pingidentity.adapters.idp.intune.IntuneAdapter</con:item>
+        <con:item name="certAdapter">com.pingidentity.adapters.idp.clientcert.ClientCertIdpAuthnAdapter</con:item>
+        <con:item name="ref1">com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter</con:item>
+    </con:map>
+    <con:map name="IdpAdapterInstanceParents"/>
+    <con:map name="SpAuthnAdapterInstances">
+        <con:item name="certAdapter1">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>
+    </con:map>
+</con:config>

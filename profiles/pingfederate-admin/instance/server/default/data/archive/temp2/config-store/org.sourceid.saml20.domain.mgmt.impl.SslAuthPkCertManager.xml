@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="localhost:default:entityId"/>
+    <con:map name="mac"/>
+    <con:map name="localhost:default:entityId3"/>
+    <con:map name="localhost:default:entityId4"/>
+    <con:map name="https://192.168.1.160:9031"/>
+</con:config>

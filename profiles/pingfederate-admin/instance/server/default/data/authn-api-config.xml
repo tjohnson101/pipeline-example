@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authnApiConfig>
+    <apiApplications>
+        <application clientIdForRedirectlessMode="ac_oic_client" description="" id="DJYmB4B7C7I9LgAICCDIuvIXT" name="tomcat" url="https://localhost:9031/pf-ws/authn/explorer"/>
+    </apiApplications>
+    <apiSettings apiEnabled="true" enableApiDescriptions="true" includeRequestContext="false" restrictAccessToRedirectlessMode="true"/>
+</authnApiConfig>

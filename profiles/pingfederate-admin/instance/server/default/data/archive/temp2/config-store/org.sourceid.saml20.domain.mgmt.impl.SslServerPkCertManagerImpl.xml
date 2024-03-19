@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="AutoCreateCertOnEngineNode">true</con:item>
+    <con:list name="ActiveServerAliases">
+        <con:ListItem>cp3onrwzq82ftwxmqzko3jpe7</con:ListItem>
+        <con:ListItem>eew0xcliwerm1o78bru7ng4ev</con:ListItem>
+    </con:list>
+    <con:list name="ActiveAdminServerAliases">
+        <con:ListItem>cp3onrwzq82ftwxmqzko3jpe7</con:ListItem>
+        <con:ListItem>eew0xcliwerm1o78bru7ng4ev</con:ListItem>
+    </con:list>
+    <con:item name="DefaultActiveServerAlias">eew0xcliwerm1o78bru7ng4ev</con:item>
+    <con:item name="DefaultActiveAdminServerAlias">eew0xcliwerm1o78bru7ng4ev</con:item>
+</con:config>

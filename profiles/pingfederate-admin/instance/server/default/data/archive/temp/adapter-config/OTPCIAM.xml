@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" uniqueUserKeyField="pf_none" isInheritExtendedContractAttributes="false" name="OTPCIAM" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Device Selection">User Choice</urn:Field>
+        <urn:Field name="Preferred Delivery Method Attribute"/>
+        <urn:Field name="Attribute Source">Chained Attributes</urn:Field>
+        <urn:Field name="Search String">username=${userid}"</urn:Field>
+        <urn:Field name="Base DN">dc=example,dc=com</urn:Field>
+        <urn:Field name="Test User ID">uid=user.0,ou=people,dc=example,dc=com</urn:Field>
+        <urn:Field name="Failure Mode">Block User</urn:Field>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiNk04MFZXa3NwaSIsInZlcnNpb24iOiIxMS4wLjcuMCJ9..fLCa1eLN52stNMg7KeFs0Q.wLAYV3lvpLOWdcP6u7Q-fQbv9mGUJP4tInd_ubSy8Jvz2PImetDNMzlkGgTr-tjz.1ORAeo1_ZzCIhxdh-HCpMg</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiNk04MFZXa3NwaSIsInZlcnNpb24iOiIxMS4wLjcuMCJ9..hm59AhzYLhNsL_Km1flHBA.kW8AGYwWRmqV50fIpqX9MqB-FOsPYhvAE_y58yp3_zlLJHI0VPqEM0PIks1VmP_c.5aoEJF88q5bJuDxt3loCuw</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Notification Delivery Methods">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Notification Publisher">ping4</urn:Field>
+                <urn:Field name="Contact Attribute">mobile</urn:Field>
+                <urn:Field name="Language Properties and Templates Key">sms</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>mobile</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+    <urn:ExtendedAttributesAdditionalProperties/>
+    <urn:UniqueKeyField>username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="otp_method" Type="Adapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:ValueText>otp_method</urn1:ValueText>
+        </urn1:AttributeMap>
+        <urn1:AttributeMap Name="mobile" Type="Adapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:ValueText>mobile</urn1:ValueText>
+        </urn1:AttributeMap>
+        <urn1:AttributeMap Name="otp_target" Type="Adapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:ValueText>otp_target</urn1:ValueText>
+        </urn1:AttributeMap>
+        <urn1:AttributeMap Name="status" Type="Adapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:ValueText>status</urn1:ValueText>
+        </urn1:AttributeMap>
+        <urn1:AttributeMap Name="username" Type="Adapter" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:ValueText>username</urn1:ValueText>
+        </urn1:AttributeMap>
+        <urn1:AttributeSource Id="PingDirLDAP" Description="PingDirLDAP" Type="LDAP" DataSourceId="LDAP-E2FC09DEBEA981E1048A833F59528972D1CDEADB" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="uid=${username}"/>
+            <urn1:Parameter Name="search_base" Value="ou=people,dc=example,dc=com"/>
+            <urn1:Parameter Name="search_attributes" Value="Subject DN,mobile"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

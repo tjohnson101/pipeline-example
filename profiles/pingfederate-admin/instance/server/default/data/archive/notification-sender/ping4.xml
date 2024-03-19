@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="ping4" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="SNS Topic ARN">arn:aws:sns:us-east-1:487098665143:ping4</urn:Field>
+        <urn:Field name="Max Payload Size">256</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="com.pingidentity.plugin.instanceid">ping4</urn:Field>
+        <urn:Field name="Max Payload Size">256</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedAttributesAdditionalProperties/>
+</urn:PluginConfiguration>
